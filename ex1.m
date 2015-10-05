@@ -2,6 +2,8 @@
 % 画像をダウンサンプリングして（標本化間隔を大きくして）
 % 表示せよ．
 
+clear; % 変数のオールクリア
+
 ORG=imread('Lenna.png'); % 原画像の入力
 imagesc(ORG); axis image; % 画像の表示
 pause; % 一時停止
