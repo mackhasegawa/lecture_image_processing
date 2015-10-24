@@ -1,7 +1,9 @@
 % 課題２　階調数と疑似輪郭
 % ２階調，４階調，８階調の画像を生成せよ．
+% 下記はサンプルプログラムである．
+% 課題作成にあたっては「Lenna」以外の画像を用いよ．
 
-clear;
+clear; % 変数のオールクリア
 
 ORG=imread('Lenna.png'); % 原画像の入力
 ORG = rgb2gray(ORG); colormap(gray); colorbar;
