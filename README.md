@@ -3,5 +3,5 @@
 例えば，このようにしてレポートを作成することが可能です．  
 https://github.com/mackhasegawa/lecture_image_processing/blob/master/kadai1.md
 
-
+fixed #2
 
