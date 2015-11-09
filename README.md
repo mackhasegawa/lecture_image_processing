@@ -4,4 +4,4 @@
 https://github.com/mackhasegawa/lecture_image_processing/blob/master/kadai1.md
 
 
-fixed 2#event-458422809
+
