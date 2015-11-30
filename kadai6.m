@@ -1,19 +1,19 @@
-% ‰Û‘è‚U@‰æ‘œ‚ÌƒqƒXƒgƒOƒ‰ƒ€
-% ‰æ‘f‚Ì”Z“xƒqƒXƒgƒOƒ‰ƒ€‚ğ¶¬‚¹‚æD
-% ‰º‹L‚ÍƒTƒ“ƒvƒ‹ƒvƒƒOƒ‰ƒ€‚Å‚ ‚éD
-% ‰Û‘èì¬‚É‚ ‚½‚Á‚Ä‚ÍuLennavˆÈŠO‚Ì‰æ‘œ‚ğ—p‚¢‚æD
+% èª²é¡Œï¼–ã€€ç”»åƒã®äºŒå€¤åŒ–
+% ä¸‹è¨˜ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’å‚è€ƒã«ã—ã¦ç”»åƒã‚’äºŒå€¤åŒ–ã›ã‚ˆï¼
+% ä¸‹è¨˜ã¯ã‚µãƒ³ãƒ—ãƒ«ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã§ã‚ã‚‹ï¼
+% èª²é¡Œä½œæˆã«ã‚ãŸã£ã¦ã¯ã€ŒLennaã€ä»¥å¤–ã®ç”»åƒã‚’ç”¨ã„ã‚ˆï¼
 
-clear; % •Ï”‚ÌƒI[ƒ‹ƒNƒŠƒA
-ORG=imread('Lenna.png'); % Œ´‰æ‘œ‚Ì“ü—Í
+clear; % å¤‰æ•°ã®ã‚ªãƒ¼ãƒ«ã‚¯ãƒªã‚¢
+ORG=imread('Lenna.png'); % åŸç”»åƒã®å…¥åŠ›
 ORG = rgb2gray(ORG);
-imagesc(ORG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\¦
-pause; % ˆê’â~
+imagesc(ORG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
+pause; % ä¸€æ™‚åœæ­¢
 
 
-IMG = ORG>128; % 128‚É‚æ‚é“ñ’l‰»
-imagesc(IMG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\¦
+IMG = ORG>128; % 128ã«ã‚ˆã‚‹äºŒå€¤åŒ–
+imagesc(IMG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
 pause;
 
-IMG = dither(ORG); % ƒfƒBƒU–@‚É‚æ‚é“ñ’l‰»
-imagesc(IMG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\¦
+IMG = dither(ORG); % ãƒ‡ã‚£ã‚¶æ³•ã«ã‚ˆã‚‹äºŒå€¤åŒ–
+imagesc(IMG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
 
