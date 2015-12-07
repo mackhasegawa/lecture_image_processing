@@ -1,20 +1,20 @@
-% 隱ｲ鬘?縲?ム繧､繝翫Α繝?け繝ｬ繝ｳ繧ｸ縺ｮ諡｡螟ｧ
-% 逕ｻ邏??繝?う繝翫Α繝?け繝ｬ繝ｳ繧ｸ繧抵ｼ舌°繧会ｼ抵ｼ包ｼ輔↓縺帙ｈ??
-% 荳玖ｨ倥?繧ｵ繝ｳ繝励Ν繝励Ο繧ｰ繝ｩ繝?〒縺ゅｋ??
-% 隱ｲ鬘御ｽ懈?縺ｫ縺ゅ◆縺｣縺ｦ縺ｯ縲鍬enna縲堺ｻ･螟悶?逕ｻ蜒上ｒ逕ｨ縺?ｈ??
-% 萓?
+% 課題7　ダイナミックレンジの拡大
+% 画素のダイナミックレンジを０から２５５にせよ． 
+% 下記はサンプルプログラムである． 
+% 課題作成にあたっては「Lenna」以外の画像を用いよ． 
+% 例
 
-ORG = imread('Lenna.jpg'); % 逕ｻ蜒上?隱ｭ縺ｿ霎ｼ縺ｿ
-ORG = rgb2gray(ORG); % 逋ｽ鮟呈ｿ?ｷ｡逕ｻ蜒上↓螟画鋤
-imagesc(ORG); colormap(gray); colorbar; % 逕ｻ蜒上?陦ｨ遉ｺ
+ORG = imread('Lenna.jpg'); % 画像の読み込み
+ORG = rgb2gray(ORG); % 白黒濃淡画像に変換
+imagesc(ORG); colormap(gray); colorbar; % 画像の表示
 pause;
-imhist(ORG); % 豼?ｺｦ繝偵せ繝医げ繝ｩ繝?ｒ逕滓?縲∬｡ｨ遉ｺ
+imhist(ORG); % 濃度ヒストグラムを生成、表示
 pause;
 ORG = double(ORG);
-mn = min(ORG(:)); % 豼?ｺｦ蛟､縺ｮ譛?ｰ丞?繧堤ｮ怜?
-mx = max(ORG(:)); % 豼?ｺｦ蛟､縺ｮ譛?､ｧ蛟､繧堤ｮ怜?
+mn = min(ORG(:)); % 濃度値の最小値を算出
+mx = max(ORG(:)); % 濃度値の最大値を算出
 ORG = (ORG-mn)/(mx-mn)*255;
-imagesc(ORG); colormap(gray); colorbar; % 逕ｻ蜒上?陦ｨ遉ｺ
+imagesc(ORG); colormap(gray); colorbar; % 画像の表示
 pause;
-ORG = uint8(ORG); % 縺薙?陦後↓縺､縺?※閠?ｯ溘○繧?
-imhist(ORG); % 豼?ｺｦ繝偵せ繝医げ繝ｩ繝?ｒ逕滓?縲∬｡ｨ遉ｺ
+ORG = uint8(ORG); % この行について考察せよ
+imhist(ORG); % 濃度ヒストグラムを生成、表示
