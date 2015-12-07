@@ -1,20 +1,20 @@
-% 課題7　ダイナミックレンジの拡大
-% 画素のダイナミックレンジを０から２５５にせよ． 
-% 下記はサンプルプログラムである． 
-% 課題作成にあたっては「Lenna」以外の画像を用いよ． 
-% 例
+% 課�?�?��イナミ�?��レンジの拡大
+% 画�??�?��ナミ�?��レンジを０から２５５にせよ??
+% 下記�?サンプルプログラ�?��ある??
+% 課題作�?にあたっては「Lenna」以外�?画像を用�?��??
+% �?
 
-ORG = imread('Lenna.jpg'); % 画像の読み込み
-ORG = rgb2gray(ORG); % 白黒濃淡画像に変換
-imagesc(ORG); colormap(gray); colorbar; % 画像の表示
+ORG = imread('Lenna.jpg'); % 画像�?読み込み
+ORG = rgb2gray(ORG); % 白黒�?��画像に変換
+imagesc(ORG); colormap(gray); colorbar; % 画像�?表示
 pause;
-imhist(ORG); % 濃度ヒストグラムを生成、表示
+imhist(ORG); % �?��ヒストグラ�?��生�?、表示
 pause;
-ORG = double(ORG); % この行について考察せよ
-mn = min(ORG(:)); % 濃度値の最小値を算出
-mx = max(ORG(:)); % 濃度値の最大値を算出
+ORG = double(ORG);
+mn = min(ORG(:)); % �?��値の�?���?を算�?
+mx = max(ORG(:)); % �?��値の�?��値を算�?
 ORG = (ORG-mn)/(mx-mn)*255;
-imagesc(ORG); colormap(gray); colorbar; % 画像の表示
+imagesc(ORG); colormap(gray); colorbar; % 画像�?表示
 pause;
-ORG = uint8(ORG); % この行について考察せよ
-imhist(ORG); % 濃度ヒストグラムを生成、表示
+ORG = uint8(ORG); % こ�?行につ�?���?��せ�?
+imhist(ORG); % �?��ヒストグラ�?��生�?、表示
