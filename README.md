@@ -1,5 +1,5 @@
-(参考)Matlab入門
-https://iapr.papercept.net/conferences/scripts/login.pl
+(参考)Matlab入門  
+http://www.ns.kogakuin.ac.jp/~ct13050/johogaku/2-2.matlab_getstart.pdf
 
 授業中にWikiでレポートを作成するお話をしましたが，Wikiではその機能に向いていませんので中止してください．すみませんが，よろしくお願いいたします．
 
