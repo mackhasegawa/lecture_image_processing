@@ -1,35 +1,42 @@
-% èª²é¡Œï¼‘ã€€æ¨™æœ¬åŒ–é–“éš”ã¨ç©ºé–“è§£åƒåº¦
-% ç”»åƒã‚’ãƒ€ã‚¦ãƒ³ã‚µãƒ³ãƒ—ãƒªãƒ³ã‚°ã—ã¦ï¼ˆæ¨™æœ¬åŒ–é–“éš”ã‚’å¤§ããã—ã¦ï¼‰
-% è¡¨ç¤ºã›ã‚ˆï¼
-% ä¸‹è¨˜ã¯ã‚µãƒ³ãƒ—ãƒ«ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã§ã‚ã‚‹ï¼
-% èª²é¡Œä½œæˆã«ã‚ãŸã£ã¦ã¯ã€ŒLennaã€ä»¥å¤–ã®ç”»åƒã‚’ç”¨ã„ã‚ˆï¼
 
-clear; % å¤‰æ•°ã®ã‚ªãƒ¼ãƒ«ã‚¯ãƒªã‚¢
-
-ORG=imread('http://coolship100.net/wp-content/uploads/2015/02/ikuta1.jpg'); % åŸç”»åƒã®å…¥åŠ›
-imagesc(ORG); axis image; % ç”»åƒã®è¡¨ç¤º
-pause; % ä¸€æ™‚åœæ­¢
-
-IMG = imresize(ORG,0.5); % ç”»åƒã®ç¸®å°
-IMG2 = imresize(IMG,2,'box'); % ç”»åƒã®æ‹¡å¤§
-imagesc(IMG2); axis image; % ç”»åƒã®è¡¨ç¤º
-pause; % ä¸€æ™‚åœæ­¢
-
-IMG = imresize(IMG,0.5); % ç”»åƒã®ç¸®å°
-IMG2 = imresize(IMG,4,'box'); % ç”»åƒã®æ‹¡å¤§
-imagesc(IMG2); axis image; % ç”»åƒã®è¡¨ç¤º
-pause; % ä¸€æ™‚åœæ­¢
-
-IMG = imresize(IMG,0.5); % ç”»åƒã®ç¸®å°
-IMG2 = imresize(IMG,8,'box'); % ç”»åƒã®æ‹¡å¤§
-imagesc(IMG2); axis image; % ç”»åƒã®è¡¨ç¤º
-pause; % ä¸€æ™‚åœæ­¢
-
-IMG = imresize(IMG,0.5); % ç”»åƒã®ç¸®å°
-IMG2 = imresize(IMG,16,'box'); % ç”»åƒã®æ‹¡å¤§
-imagesc(IMG2); axis image; % ç”»åƒã®è¡¨ç¤º
-pause; % ä¸€æ™‚åœæ­¢
-
-IMG = imresize(IMG,0.5); % ç”»åƒã®ç¸®å°
-IMG2 = imresize(IMG,32,'box'); % ç”»åƒã®æ‹¡å¤§
-imagesc(IMG2); axis image; % ç”»åƒã®è¡¨ç¤º
+ % ‰æ‘œ‚ğƒ_ƒEƒ“ƒTƒ“ƒvƒŠƒ“ƒO‚µ‚Äi•W–{‰»ŠÔŠu‚ğ‘å‚«‚­‚µ‚Äj 
+ % •\¦‚¹‚æD 
+ % ‰º‹L‚ÍƒTƒ“ƒvƒ‹ƒvƒƒOƒ‰ƒ€‚Å‚ ‚éD 
+ % ‰Û‘èì¬‚É‚ ‚½‚Á‚Ä‚ÍuLennavˆÈŠO‚Ì‰æ‘œ‚ğ—p‚¢‚æD 
+ 
+ 
+ clear; % •Ï”‚ÌƒI[ƒ‹ƒNƒŠƒA 
+ 
+ 
+ ORG=imread('http://ks.c.yimg.jp/res/chie-que-10141/10/141/933/305/i320'); % Œ´‰æ‘œ‚Ì“ü—Í 
+ imagesc(ORG); axis image; % ‰æ‘œ‚Ì•\¦ 
+ pause; % ˆê’â~ 
+ 
+ 
+ IMG = imresize(ORG,0.5); % ‰æ‘œ‚Ìk¬ 
+ IMG2 = imresize(IMG,2,'box'); % ‰æ‘œ‚ÌŠg‘å 
+ imagesc(IMG2); axis image; % ‰æ‘œ‚Ì•\¦ 
+ pause; % ˆê’â~ 
+ 
+ 
+ IMG = imresize(IMG,0.5); % ‰æ‘œ‚Ìk¬ 
+ IMG2 = imresize(IMG,4,'box'); % ‰æ‘œ‚ÌŠg‘å 
+ imagesc(IMG2); axis image; % ‰æ‘œ‚Ì•\¦ 
+ pause; % ˆê’â~ 
+ 
+ 
+ IMG = imresize(IMG,0.5); % ‰æ‘œ‚Ìk¬ 
+ IMG2 = imresize(IMG,8,'box'); % ‰æ‘œ‚ÌŠg‘å 
+ imagesc(IMG2); axis image; % ‰æ‘œ‚Ì•\¦ 
+ pause; % ˆê’â~ 
+ 
+ 
+ IMG = imresize(IMG,0.5); % ‰æ‘œ‚Ìk¬ 
+ IMG2 = imresize(IMG,16,'box'); % ‰æ‘œ‚ÌŠg‘å 
+ imagesc(IMG2); axis image; % ‰æ‘œ‚Ì•\¦ 
+ pause; % ˆê’â~ 
+ 
+ 
+ IMG = imresize(IMG,0.5); % ‰æ‘œ‚Ìk¬ 
+ IMG2 = imresize(IMG,32,'box'); % ‰æ‘œ‚ÌŠg‘å 
+imagesc(IMG2); axis image; % ‰æ‘œ‚Ì•\¦ 
