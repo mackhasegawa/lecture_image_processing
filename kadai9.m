@@ -1,22 +1,23 @@
-% èª²é¡Œï¼™ ãƒ¡ãƒ‡ã‚£ã‚¢ãƒ³ãƒ•ã‚£ãƒ«ã‚¿ã¨å…ˆé‹­åŒ–
-% ãƒ¡ãƒ‡ã‚£ã‚¢ãƒ³ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ã‚’é©ç”¨ã—ï¼Œãƒã‚¤ã‚ºé™¤å»ã‚’ä½“é¨“ã›ã‚ˆï¼
-% å„è‡ªï¼ŒLennaä»¥å¤–ã®ç”»åƒã‚’ç”¨ã„ã‚ˆï¼
-% ä¾‹
-
-ORG = imread('Lenna.jpg'); % ç”»åƒã®èª­ã¿è¾¼ã¿
-ORG = rgb2gray(ORG); % ç™½é»’æ¿ƒæ·¡ç”»åƒã«å¤‰æ›
-imagesc(ORG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
-pause;
-ORG = imnoise(ORG,'salt & pepper',0.02); % ãƒã‚¤ã‚ºæ·»ä»˜
-imagesc(ORG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
-pause;
-IMG = filter2(fspecial('average',3),ORG); % å¹³æ»‘åŒ–ãƒ•ã‚£ãƒ«ã‚¿ã§é›‘éŸ³é™¤å»
-imagesc(IMG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
-pause;
-IMG = medfilt2(ORG,[3 3]); % ãƒ¡ãƒ‡ã‚£ã‚¢ãƒ³ãƒ•ã‚£ãƒ«ã‚¿ã§é›‘éŸ³é™¤å»
-imagesc(IMG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
-pause;
-f=[0,-1,0;-1,5,-1;0,-1,0]; % ãƒ•ã‚£ãƒ«ã‚¿ã®è¨­è¨ˆ
-IMG = filter2(f,IMG,'same'); % ãƒ•ã‚£ãƒ«ã‚¿ã®é©ç”¨
-imagesc(IMG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
-pause;
+ % ‰Û‘è‚X ƒƒfƒBƒAƒ“ƒtƒBƒ‹ƒ^‚Ææ‰s‰» 
+ % ƒƒfƒBƒAƒ“ƒtƒBƒ‹ƒ^[‚ğ“K—p‚µCƒmƒCƒYœ‹‚ğ‘ÌŒ±‚¹‚æD 
+ % Še©CLennaˆÈŠO‚Ì‰æ‘œ‚ğ—p‚¢‚æD 
+ % —á 
+ 
+ 
+ ORG = imread('http://www.officiallyjd.com/wp-content/uploads/2012/03/20120316_yoshidakayuriko_26.jpg'); % ‰æ‘œ‚Ì“Ç‚İ‚İ 
+ ORG = rgb2gray(ORG); % ”’•”Z’W‰æ‘œ‚É•ÏŠ· 
+ imagesc(ORG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\¦ 
+ pause; 
+ ORG = imnoise(ORG,'salt & pepper',0.02); % ƒmƒCƒY“Y•t 
+ imagesc(ORG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\¦ 
+ pause; 
+ IMG = filter2(fspecial('average',3),ORG); % •½ŠŠ‰»ƒtƒBƒ‹ƒ^‚ÅG‰¹œ‹ 
+ imagesc(IMG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\¦ 
+ pause; 
+ IMG = medfilt2(ORG,[3 3]); % ƒƒfƒBƒAƒ“ƒtƒBƒ‹ƒ^‚ÅG‰¹œ‹ 
+ imagesc(IMG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\¦ 
+ pause; 
+ f=[0,-1,0;-1,5,-1;0,-1,0]; % ƒtƒBƒ‹ƒ^‚ÌİŒv 
+ IMG = filter2(f,IMG,'same'); % ƒtƒBƒ‹ƒ^‚Ì“K—p 
+ imagesc(IMG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\¦ 
+ pause; 

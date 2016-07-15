@@ -1,19 +1,23 @@
-% èª²é¡Œï¼–ã€€ç”»åƒã®äºŒå€¤åŒ–
-% ä¸‹è¨˜ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’å‚è€ƒã«ã—ã¦ç”»åƒã‚’äºŒå€¤åŒ–ã›ã‚ˆï¼Ž
-% ä¸‹è¨˜ã¯ã‚µãƒ³ãƒ—ãƒ«ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã§ã‚ã‚‹ï¼Ž
-% èª²é¡Œä½œæˆã«ã‚ãŸã£ã¦ã¯ã€ŒLennaã€ä»¥å¤–ã®ç”»åƒã‚’ç”¨ã„ã‚ˆï¼Ž
-
-clear; % å¤‰æ•°ã®ã‚ªãƒ¼ãƒ«ã‚¯ãƒªã‚¢
-ORG=imread('Lenna.png'); % åŽŸç”»åƒã®å…¥åŠ›
-ORG = rgb2gray(ORG);
-imagesc(ORG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
-pause; % ä¸€æ™‚åœæ­¢
-
-
-IMG = ORG>128; % 128ã«ã‚ˆã‚‹äºŒå€¤åŒ–
-imagesc(IMG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
-pause;
-
-IMG = dither(ORG); % ãƒ‡ã‚£ã‚¶æ³•ã«ã‚ˆã‚‹äºŒå€¤åŒ–
-imagesc(IMG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
-
+ % ‰Û‘è‚U@‰æ‘œ‚Ì“ñ’l‰» 
+ % ‰º‹L‚ÌƒvƒƒOƒ‰ƒ€‚ðŽQl‚É‚µ‚Ä‰æ‘œ‚ð“ñ’l‰»‚¹‚æD 
+ % ‰º‹L‚ÍƒTƒ“ƒvƒ‹ƒvƒƒOƒ‰ƒ€‚Å‚ ‚éD 
+ % ‰Û‘èì¬‚É‚ ‚½‚Á‚Ä‚ÍuLennavˆÈŠO‚Ì‰æ‘œ‚ð—p‚¢‚æD 
+ 
+ 
+ clear; % •Ï”‚ÌƒI[ƒ‹ƒNƒŠƒA 
+ ORG=imread('http://www.officiallyjd.com/wp-content/uploads/2012/03/20120316_yoshidakayuriko_26.jpg'); % Œ´‰æ‘œ‚Ì“ü—Í 
+ ORG = rgb2gray(ORG); 
+imagesc(ORG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\Ž¦ 
+ pause; % ˆêŽž’âŽ~ 
+ 
+ 
+ 
+ 
+ IMG = ORG>128; % 128‚É‚æ‚é“ñ’l‰» 
+ imagesc(IMG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\Ž¦ 
+ pause; 
+ 
+ 
+ IMG = dither(ORG); % ƒfƒBƒU–@‚É‚æ‚é“ñ’l‰» 
+ imagesc(IMG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\Ž¦ 
+  

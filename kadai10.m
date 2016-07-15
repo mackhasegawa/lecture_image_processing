@@ -1,24 +1,22 @@
-% èª²é¡Œ10 ç”»åƒã®ã‚¨ãƒƒã‚¸æŠ½å‡º 
-% æ¬¡ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’å‚è€ƒã«ã—ã¦ï¼Œã‚¨ãƒƒã‚¸æŠ½å‡ºã‚’ä½“é¨“ã›ã‚ˆï¼
-% å„è‡ªï¼ŒLennaä»¥å¤–ã®ç”»åƒã‚’ç”¨ã„ã‚ˆï¼ 
-% ä¾‹
+% ‰Û‘è10 ‰æ‘œ‚ÌƒGƒbƒW’Šo 
+% Ÿ‚ÌƒvƒƒOƒ‰ƒ€‚ğQl‚É‚µ‚ÄCƒGƒbƒW’Šo‚ğ‘ÌŒ±‚¹‚æD
+% Še©CLennaˆÈŠO‚Ì‰æ‘œ‚ğ—p‚¢‚æD 
+% —á
 
-ORG = imread('Lenna.jpg'); % åŸç”»åƒã®å…¥åŠ›
-ORG = rgb2gray(ORG); %ã‚«ãƒ©ãƒ¼ã‹ã‚‰ã‚°ãƒ¬ã‚¤ã¸ã®å¤‰æ›
-imagesc(ORG); colormap('gray'); colorbar;% ç”»åƒè¡¨ç¤º
-pause; % ä¸€æ™‚åœæ­¢
+ORG = imread('http://jinfo.jp/wp-content/uploads/2014/06/%E7%94%9F%E7%94%B0%E6%96%97%E7%9C%9F-%E7%94%BB%E5%83%8F.jpg'); % Œ´‰æ‘œ‚Ì“ü—Í
+ORG = rgb2gray(ORG); %ƒJƒ‰[‚©‚çƒOƒŒƒC‚Ö‚Ì•ÏŠ·
+imagesc(ORG); colormap('gray'); colorbar;% ‰æ‘œ•\¦
+pause; % ˆê’â~
 
-IMG = edge(ORG,'prewitt'); % ã‚¨ãƒƒã‚¸æŠ½å‡ºï¼ˆãƒ—ãƒ¬ã‚¦ã‚£ãƒƒãƒˆæ³•ï¼‰
-imagesc(IMG); colormap('gray'); colorbar;% ç”»åƒè¡¨ç¤º
-pause; % ä¸€æ™‚åœæ­¢
+IMG = edge(ORG,'prewitt'); % ƒGƒbƒW’ŠoiƒvƒŒƒEƒBƒbƒg–@j
+imagesc(IMG); colormap('gray'); colorbar;% ‰æ‘œ•\¦
+pause; % ˆê’â~
 
-IMG = edge(ORG,'sobel'); % ã‚¨ãƒƒã‚¸æŠ½å‡ºï¼ˆã‚½ãƒ™ãƒ«æ³•ï¼‰
-imagesc(IMG); colormap('gray'); colorbar;% ç”»åƒè¡¨ç¤º
-pause; % ä¸€æ™‚åœæ­¢
+IMG = edge(ORG,'sobel'); % ƒGƒbƒW’Šoiƒ\ƒxƒ‹–@j
+imagesc(IMG); colormap('gray'); colorbar;% ‰æ‘œ•\¦
+pause; % ˆê’â~
 
-IMG = edge(ORG,'canny'); % ã‚¨ãƒƒã‚¸æŠ½å‡ºï¼ˆã‚­ãƒ£ãƒ‹ãƒ¼æ³•ï¼‰
-imagesc(IMG); colormap('gray'); colorbar;% ç”»åƒè¡¨ç¤º
-pause; % ä¸€æ™‚åœæ­¢
-
-
+IMG = edge(ORG,'canny'); % ƒGƒbƒW’ŠoiƒLƒƒƒj[–@j
+imagesc(IMG); colormap('gray'); colorbar;% ‰æ‘œ•\¦
+pause; % ˆê’â~
 
