@@ -2,13 +2,14 @@
 
 標準画像「生田斗真」を原画像とする．この画像は縦300画像，横240画素による長方形のディジタルカラー画像である．
 
-ORG=imread('http://ks.c.yimg.jp/res/chie-que-10141/10/141/933/305/i320'); % 原画像の入力  
-imagesc(ORG); axis image; % 画像の表示
+ ORG=imread('http://ks.c.yimg.jp/res/chie-que-10141/10/141/933/305/i320'); % 原画像の入力 
+ ORG = rgb2gray(ORG); colormap(gray); colorbar; 
+ imagesc(ORG); axis image; % 画像の表示 
 
-によって，原画像を読み込み，表示した結果を図１に示す．
+によって，原画像を読み込み，モノクロ表示した結果を図１に示す．
 
 ![原画像](kadai1image1.jpg )  
-図1 原画像
+図1 モノクロに変換された原画像
 
 原画像を２階調にする
 
