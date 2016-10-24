@@ -27,12 +27,12 @@ https://github.com/mackhasegawa/lecture_image_processing/blob/master/kadai1.md
 ドルマーク2つで囲えば行全体に、
 1つで囲めば文中に数式が書けます。
 
-$$
+$
 f'(x) = \frac{d f(x)}{d x} = \lim_{\Delta x \to 0} \frac{f(x+\Delta x) - f(x)}{\Delta x}
-$$
+$
 
 $f(x) = x^2$ として
-$$
+$
 \begin{align}
 f'(x) = \frac{dx^2}{dx} &=& \lim_{\Delta x \to 0} \frac{(x+\Delta x)^2 - x^2}{\Delta x} \\
 &=&  \lim_{\Delta x \to 0} \frac{(x^2+2x\Delta x + \Delta x^2) - x^2}{\Delta x} \\
@@ -40,4 +40,4 @@ f'(x) = \frac{dx^2}{dx} &=& \lim_{\Delta x \to 0} \frac{(x+\Delta x)^2 - x^2}{\D
 &=&  \lim_{\Delta x \to 0} 2x + \Delta x \\
 &=&  2x \\
 \end{align}
-$$
+$
