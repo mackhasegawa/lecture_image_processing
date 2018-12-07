@@ -3,7 +3,7 @@
 % 下記はサンプルプログラムである．
 % 課題作成にあたっては「Lenna」以外の画像を用いよ．
 
-ORG=imread('Lenna.png'); % 原画像の入力
+ORG=imread('miku.jpg'); % 原画像の入力
 ORG = rgb2gray(ORG); % カラー画像を白黒濃淡画像へ変換
 imagesc(ORG); colormap(gray); colorbar;
 pause;

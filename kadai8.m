@@ -1,16 +1,16 @@
-% èª²é¡Œï¼˜ ãƒ©ãƒ™ãƒªãƒ³ã‚°
-% äºŒå€¤åŒ–ã•ã‚ŒãŸç”»åƒã®é€£çµæˆåˆ†ã«ãƒ©ãƒ™ãƒ«ã‚’ã¤ã‘ã‚ˆï¼
-% ä¸‹è¨˜ã¯ã‚µãƒ³ãƒ—ãƒ«ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã§ã‚ã‚‹ï¼ 
-% èª²é¡Œä½œæˆã«ã‚ãŸã£ã¦ã¯ã€ŒLennaã€ä»¥å¤–ã®ç”»åƒã‚’ç”¨ã„ã‚ˆï¼ 
-% ä¾‹
+% ‰Û‘è‚W ƒ‰ƒxƒŠƒ“ƒO
+% “ñ’l‰»‚³‚ê‚½‰æ‘œ‚Ì˜AŒ‹¬•ª‚Éƒ‰ƒxƒ‹‚ğ‚Â‚¯‚æD
+% ‰º‹L‚ÍƒTƒ“ƒvƒ‹ƒvƒƒOƒ‰ƒ€‚Å‚ ‚éD 
+% ‰Û‘èì¬‚É‚ ‚½‚Á‚Ä‚ÍuLennavˆÈŠO‚Ì‰æ‘œ‚ğ—p‚¢‚æD 
+% —á
 
-ORG = imread('Lenna.jpg'); % ç”»åƒã®èª­ã¿è¾¼ã¿
-ORG = rgb2gray(ORG); % ç™½é»’æ¿ƒæ·¡ç”»åƒã«å¤‰æ›
-imagesc(ORG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
+ORG = imread('miku.jpg'); % ‰æ‘œ‚Ì“Ç‚İ‚İ
+ORG = rgb2gray(ORG); % ”’•”Z’W‰æ‘œ‚É•ÏŠ·
+imagesc(ORG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\¦
 pause;
-IMG = ORG > 128; % é–¾å€¤128ã§äºŒå€¤åŒ–
-imagesc(IMG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
+IMG = ORG > 128; % è‡’l128‚Å“ñ’l‰»
+imagesc(IMG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\¦
 pause;
 IMG = bwlabeln(IMG);
-imagesc(IMG); colormap(jet); colorbar; % ç”»åƒã®è¡¨ç¤º
+imagesc(IMG); colormap(jet); colorbar; % ‰æ‘œ‚Ì•\¦
 pause;

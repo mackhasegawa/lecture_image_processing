@@ -4,32 +4,41 @@
 % ‰º‹L‚ÍƒTƒ“ƒvƒ‹ƒvƒƒOƒ‰ƒ€‚Å‚ ‚éD
 % ‰Û‘èì¬‚É‚ ‚½‚Á‚Ä‚ÍuLennavˆÈŠO‚Ì‰æ‘œ‚ğ—p‚¢‚æD
 
-clear; % •Ï”‚ÌƒI[ƒ‹ƒNƒŠƒA
+clear all; close all% •Ï”‚ÌƒI[ƒ‹ƒNƒŠƒA
 
-ORG=imread('Lenna.png'); % Œ´‰æ‘œ‚Ì“ü—Í
+figure(1)
+ORG=imread('miku.jpg'); % Œ´‰æ‘œ‚Ì“ü—Í
 imagesc(ORG); axis image; % ‰æ‘œ‚Ì•\¦
-pause; % ˆê’â~
+title('Œ´‰æ‘œ')
 
+figure(2)
 IMG = imresize(ORG,0.5); % ‰æ‘œ‚Ìk¬
 IMG2 = imresize(IMG,2,'box'); % ‰æ‘œ‚ÌŠg‘å
 imagesc(IMG2); axis image; % ‰æ‘œ‚Ì•\¦
-pause; % ˆê’â~
+title('1/2‚Ék¬‚µ‚Ä2”{‚ÉŠg‘å‚µ‚½‰æ‘œ')
 
+figure(3)
 IMG = imresize(IMG,0.5); % ‰æ‘œ‚Ìk¬
 IMG2 = imresize(IMG,4,'box'); % ‰æ‘œ‚ÌŠg‘å
 imagesc(IMG2); axis image; % ‰æ‘œ‚Ì•\¦
-pause; % ˆê’â~
+title('1/2‚Ék¬‚µ‚Ä4”{‚ÉŠg‘å‚µ‚½‰æ‘œ')
 
+figure(4)
 IMG = imresize(IMG,0.5); % ‰æ‘œ‚Ìk¬
 IMG2 = imresize(IMG,8,'box'); % ‰æ‘œ‚ÌŠg‘å
 imagesc(IMG2); axis image; % ‰æ‘œ‚Ì•\¦
-pause; % ˆê’â~
+title('1/2‚Ék¬‚µ‚Ä8”{‚ÉŠg‘å‚µ‚½‰æ‘œ')
 
+figure(5)
 IMG = imresize(IMG,0.5); % ‰æ‘œ‚Ìk¬
 IMG2 = imresize(IMG,16,'box'); % ‰æ‘œ‚ÌŠg‘å
 imagesc(IMG2); axis image; % ‰æ‘œ‚Ì•\¦
-pause; % ˆê’â~
+title('1/2‚Ék¬‚µ‚Ä16”{‚ÉŠg‘å‚µ‚½‰æ‘œ')
 
+figure(6)
 IMG = imresize(IMG,0.5); % ‰æ‘œ‚Ìk¬
 IMG2 = imresize(IMG,32,'box'); % ‰æ‘œ‚ÌŠg‘å
 imagesc(IMG2); axis image; % ‰æ‘œ‚Ì•\¦
+title('1/2‚Ék¬‚µ‚Ä32”{‚ÉŠg‘å‚µ‚½‰æ‘œ')
+
+return
