@@ -1,35 +1,23 @@
-% 課題１　標本化間隔と空間解像度
-% 画像をダウンサンプリングして（標本化間隔を大きくして）
-% 表示せよ．
-% 下記はサンプルプログラムである．
-% 課題作成にあたっては「Lenna」以外の画像を用いよ．
-
 clear; % 変数のオールクリア
 
-ORG=imread('Lenna.png'); % 原画像の入力
-imagesc(ORG); axis image; % 画像の表示
-pause; % 一時停止
+% === 変数を宣言
+OriginalImageDir = 'images/origin/';
+OutputImageDir = 'images/kadai1/';
+OriginalImageFileName = 'ai-kato';
+OriginalImageFileExt = '.jpg';
+BoxRate1 = [1,2,4,8,16,32]
 
-IMG = imresize(ORG,0.5); % 画像の縮小
-IMG2 = imresize(IMG,2,'box'); % 画像の拡大
-imagesc(IMG2); axis image; % 画像の表示
-pause; % 一時停止
+% 原画像の入力
+OriginalImagePath = sprintf('%s%s%s', OriginalImageDir, OriginalImageFileName, OriginalImageFileExt);
+OriginalImage = imread(OriginalImagePath);
+IMG = OriginalImage;
 
-IMG = imresize(IMG,0.5); % 画像の縮小
-IMG2 = imresize(IMG,4,'box'); % 画像の拡大
-imagesc(IMG2); axis image; % 画像の表示
-pause; % 一時停止
-
-IMG = imresize(IMG,0.5); % 画像の縮小
-IMG2 = imresize(IMG,8,'box'); % 画像の拡大
-imagesc(IMG2); axis image; % 画像の表示
-pause; % 一時停止
-
-IMG = imresize(IMG,0.5); % 画像の縮小
-IMG2 = imresize(IMG,16,'box'); % 画像の拡大
-imagesc(IMG2); axis image; % 画像の表示
-pause; % 一時停止
-
-IMG = imresize(IMG,0.5); % 画像の縮小
-IMG2 = imresize(IMG,32,'box'); % 画像の拡大
-imagesc(IMG2); axis image; % 画像の表示
+% Boxrateを元に画像をピクセル化して出力
+for BoxRate = [1 2 4 8 16 32]
+    OutputImagePath = sprintf('%s%s-box%02d%s', OutputImageDir, OriginalImageFileName, BoxRate, OriginalImageFileExt);
+    IMG = imresize(IMG, 0.5); % 画像の縮小
+    IMG2 = imresize(IMG, BoxRate,'box'); % 画像の拡大
+    disp(OutputImagePath);
+    imwrite(IMG2, OutputImagePath);
+end
+msgbox("処理完了");
