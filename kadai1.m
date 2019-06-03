@@ -1,6 +1,7 @@
-clear; % 変数のオールクリア
+% 変数のオールクリア
+clear;
 
-% === 変数を宣言
+% 変数を宣言
 OriginalImageDir = 'images/origin/';
 OutputImageDir = 'images/kadai1/';
 OriginalImageFileName = 'ai-kato';
@@ -20,4 +21,5 @@ for BoxRate = [1 2 4 8 16 32]
     disp(OutputImagePath);
     imwrite(IMG2, OutputImagePath);
 end
+
 msgbox("処理完了");
