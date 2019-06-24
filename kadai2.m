@@ -1,84 +1,46 @@
-% ‰Û‘è‚Q@ŠK’²”‚Æ‹^——ÖŠs
-% ‚QŠK’²C‚SŠK’²C‚WŠK’²‚Ì‰æ‘œ‚ğ¶¬‚¹‚æD
-% ‰º‹L‚ÍƒTƒ“ƒvƒ‹ƒvƒƒOƒ‰ƒ€‚Å‚ ‚éD
-% ‰Û‘èì¬‚É‚ ‚½‚Á‚Ä‚ÍuLennavˆÈŠO‚Ì‰æ‘œ‚ğ—p‚¢‚æD
+% ï¿½Û‘ï¿½Qï¿½@ï¿½Kï¿½ï¿½ï¿½ï¿½ï¿½Æ‹^ï¿½ï¿½ï¿½ÖŠs
+% ï¿½Qï¿½Kï¿½ï¿½ï¿½Cï¿½Sï¿½Kï¿½ï¿½ï¿½Cï¿½Wï¿½Kï¿½ï¿½ï¿½Ì‰æ‘œï¿½ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½D
+% ï¿½ï¿½ï¿½Lï¿½ÍƒTï¿½ï¿½ï¿½vï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½D
+% ï¿½Û‘ï¿½ì¬ï¿½É‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ÍuLennaï¿½vï¿½ÈŠOï¿½Ì‰æ‘œï¿½ï¿½pï¿½ï¿½ï¿½ï¿½D
 
-clear; % •Ï”‚ÌƒI[ƒ‹ƒNƒŠƒA
+clear; % ï¿½Ïï¿½ï¿½ÌƒIï¿½[ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½A
 
-% •Ï”‚ğéŒ¾
-OriginalImageDir = 'images/origin/';
-OutputImageDir = 'images/kadai2/';
-OriginalImageFileName = 'taki';
-OriginalImageFileExt = '.jpg';
+WORKDIR="images/kadai2";
+ORG=imread('images/origin/taki.jpg'); % ï¿½ï¿½ï¿½æ‘œï¿½Ì“ï¿½ï¿½ï¿½
+ORG = rgb2gray(ORG); colormap(gray);
+OutputImagePath = sprintf('%s/%s', WORKDIR, "taki-grayscale.png");
+imwrite(ORG, OutputImagePath, 'BitDepth', 16);
 
-% Œ´‰æ‘œ‚Ì“ü—Í
-OriginalImagePath = sprintf('%s%s%s', OriginalImageDir, OriginalImageFileName, OriginalImageFileExt);
-ORG = imread(OriginalImagePath);
-
-% ƒOƒŒ[ƒXƒP[ƒ‹
-EffectName="GrayScale";
-OutputImagePath = sprintf('%s%s-%s%s', OutputImageDir, OriginalImageFileName, EffectName, OriginalImageFileExt);
-GRAYSCALE = rgb2gray(ORG); colormap(gray); colorbar;
-disp(OutputImagePath);
-imwrite(GRAYSCALE, OutputImagePath);
-
-% ‚QŠK’²‰æ‘œ‚Ì¶¬
-
+% ï¿½Qï¿½Kï¿½ï¿½ï¿½æ‘œï¿½Ìï¿½ï¿½ï¿½
 IMG = ORG>128;
-EffectName="Step2";
-OutputImagePath = sprintf('%s%s-%s%s', OutputImageDir, OriginalImageFileName, EffectName, OriginalImageFileExt);
-% IMG = rgb2gray(IMG); colormap(gray);
-GRAYSCALE = rgb2gray(IMG); colormap(gray); colorbar;
-imwrite(GRAYSCALE, OutputImagePath);
+imagesc(IMG); colormap(gray);
+OutputImagePath = sprintf('%s/%s', WORKDIR, "taki-step2.png");
+IMG=IMG-min(IMG(:)); % shift data such that the smallest element of A is 0 
+IMG=IMG/max(IMG(:)); % normalize the shifted data to 1 
+imwrite(IMG, OutputImagePath, 'BitDepth', 16);
 
-% ‚SŠK’²‰æ‘œ‚Ì¶¬
+% ï¿½Sï¿½Kï¿½ï¿½ï¿½æ‘œï¿½Ìï¿½ï¿½ï¿½
 IMG0 = ORG>64;
 IMG1 = ORG>128;
 IMG2 = ORG>192;
 IMG = IMG0 + IMG1 + IMG2;
-EffectName="Step4";
-OutputImagePath = sprintf('%s%s-%s%s', OutputImageDir, OriginalImageFileName, EffectName, OriginalImageFileExt);
-imwrite(IMG, OutputImagePath);
+imagesc(IMG); colormap(gray);
+OutputImagePath = sprintf('%s/%s', WORKDIR, "taki-step4.png");
+IMG=IMG-min(IMG(:)); % shift data such that the smallest element of A is 0 
+IMG=IMG/max(IMG(:)); % normalize the shifted data to 1 
+imwrite(IMG, OutputImagePath, 'BitDepth', 16);
 
-% ‚WŠK’²‚É‚Â‚¢‚Ä‚ÍCŠe©ŒŸ“¢‚µ‚Ä‚­‚¾‚³‚¢D
+% 8ï¿½Kï¿½ï¿½
 IMG0 = ORG>32;
 IMG1 = ORG>64;
 IMG2 = ORG>96;
 IMG3 = ORG>128;
 IMG4 = ORG>160;
 IMG5 = ORG>192;
-IMG6 = ORG>224;
-
+IMG6 = ORG>224; 
 IMG = IMG0 + IMG1 + IMG2 + IMG3 + IMG4 + IMG5 + IMG6;
-EffectName="Step8";
-OutputImagePath = sprintf('%s%s-%s%s', OutputImageDir, OriginalImageFileName, EffectName, OriginalImageFileExt);
-imwrite(IMG, OutputImagePath);
-
-msgbox("ˆ—Š®—¹");
-%{
-% ‰Û‘è‚Q@ŠK’²”‚Æ‹^——ÖŠs
-% ‚QŠK’²C‚SŠK’²C‚WŠK’²‚Ì‰æ‘œ‚ğ¶¬‚¹‚æD
-% ‰º‹L‚ÍƒTƒ“ƒvƒ‹ƒvƒƒOƒ‰ƒ€‚Å‚ ‚éD
-% ‰Û‘èì¬‚É‚ ‚½‚Á‚Ä‚ÍuLennavˆÈŠO‚Ì‰æ‘œ‚ğ—p‚¢‚æD
-
-clear; % •Ï”‚ÌƒI[ƒ‹ƒNƒŠƒA
-
-ORG=imread('Lenna.png'); % Œ´‰æ‘œ‚Ì“ü—Í
-ORG = rgb2gray(ORG); colormap(gray); colorbar;
-imagesc(ORG); axis image; % ‰æ‘œ‚Ì•\¦
-pause; % ˆê’â~
-
-% ‚QŠK’²‰æ‘œ‚Ì¶¬
-IMG = ORG>128;
-imagesc(IMG); colormap(gray); colorbar;  axis image;
-pause;
-
-% ‚SŠK’²‰æ‘œ‚Ì¶¬
-IMG0 = ORG>64;
-IMG1 = ORG>128;
-IMG2 = ORG>192;
-IMG = IMG0 + IMG1 + IMG2;
-imagesc(IMG); colormap(gray); colorbar;  axis image;
-
-% ‚WŠK’²‚É‚Â‚¢‚Ä‚ÍCŠe©ŒŸ“¢‚µ‚Ä‚­‚¾‚³‚¢
-%}
+imagesc(IMG); colormap(gray);
+OutputImagePath = sprintf('%s/%s', WORKDIR, "taki-step8.png");
+IMG=IMG-min(IMG(:)); % shift data such that the smallest element of A is 0 
+IMG=IMG/max(IMG(:)); % normalize the shifted data to 1 
+imwrite(IMG, OutputImagePath, 'BitDepth', 16);
